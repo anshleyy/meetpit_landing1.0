@@ -486,7 +486,7 @@ function FeaturesSection() {
     {
       icon: <Zap className="h-8 w-8 text-amber-600" />,
       title: "Instant Summaries",
-      description: "Whisper → GPT-3.5 summarizes in seconds",
+      description: "Whisper → Gemini summarizes in seconds",
       bgColor: "bg-gradient-to-br from-cream-200 to-amber-100",
       textColor: "text-brown-800",
     },
@@ -506,8 +506,8 @@ function FeaturesSection() {
     },
     {
       icon: <BarChart3 className="h-8 w-8 text-blush-600" />,
-      title: "Single Popup UI",
-      description: "Two-tab Chrome extension → Meeting & Standup",
+      title: "Unified Workflow UI",
+      description: "Chrome extension: Meeting & Standup tabs, real-time sync",
       bgColor: "bg-gradient-to-br from-blush-200 to-blush-100",
       textColor: "text-brown-800",
     },
@@ -589,7 +589,7 @@ function HowItWorksSection() {
     {
       number: "04",
       title: "Automated Standup",
-      description: "Daily digest pulls from GitHub and Notion, delivering team updates to Slack.",
+      description: "Unified agent pulls from GitHub & Notion, summarizes with Gemini, and posts team updates to Slack.",
       icon: <Github className="h-6 w-6" />,
       mainIcon: <RefreshCw className="h-8 w-8" />,
       bgColor: "bg-gradient-to-br from-purple-100 to-purple-50",
@@ -696,15 +696,15 @@ function ArchitectureSection() {
     {
       id: "extension",
       title: "Chrome Extension",
-      subtitle: "Recording Interface",
+      subtitle: "Meeting Capture & Upload",
       icon: <Chrome className="h-8 w-8 text-white" />,
       gradient: "from-sage-400 to-brown-400",
       position: { row: 1, col: 1 },
     },
     {
       id: "api",
-      title: "MeetPit API",
-      subtitle: "Processing Engine",
+      title: "Summarization & Dispatch Engine",
+      subtitle: "FastAPI + Gemini",
       icon: (
         <div className="h-8 w-8 bg-white rounded flex items-center justify-center">
           <span className="text-xs font-bold text-sage-600">API</span>
@@ -716,7 +716,7 @@ function ArchitectureSection() {
     {
       id: "ai",
       title: "Whisper | Gemini",
-      subtitle: "AI Processing",
+      subtitle: "Transcription & Summarization (Gemini)",
       icon: (
         <div className="flex gap-1">
           <div className="w-4 h-4 bg-sage-300 rounded text-xs flex items-center justify-center text-sage-800 font-bold">
@@ -729,6 +729,14 @@ function ArchitectureSection() {
       ),
       gradient: "from-blush-400 to-sage-400",
       position: { row: 1, col: 3 },
+    },
+    {
+      id: "standup",
+      title: "Auto Standup Agent",
+      subtitle: "Progress Aggregator (Gemini)",
+      icon: <RefreshCw className="h-8 w-8 text-white" />,
+      gradient: "from-purple-400 to-purple-200",
+      position: { row: 2, col: 2 },
     },
     {
       id: "notion",
@@ -744,7 +752,7 @@ function ArchitectureSection() {
       subtitle: "Team Communication",
       icon: <Slack className="h-8 w-8 text-white" />,
       gradient: "from-sage-500 to-sage-400",
-      position: { row: 2, col: 2 },
+      position: { row: 2, col: 3 },
     },
     {
       id: "github",
@@ -752,7 +760,7 @@ function ArchitectureSection() {
       subtitle: "Code Repository",
       icon: <Github className="h-8 w-8 text-white" />,
       gradient: "from-gray-600 to-gray-500",
-      position: { row: 2, col: 3 },
+      position: { row: 3, col: 2 },
     },
   ]
 
